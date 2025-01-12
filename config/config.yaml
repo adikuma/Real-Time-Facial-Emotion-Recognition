@@ -1,0 +1,32 @@
+data:
+  root_dir: 'data/fer2013'
+  train_dir: 'train'
+  test_dir: 'test'
+  image_size: 48
+  batch_size: 64
+
+model:
+  num_classes: 7
+  learning_rate: 0.001
+  num_epochs: 50
+
+training:
+  device: 'cuda'
+  save_dir: 'models/saved_models'
+  log_dir: 'logs'
+  results_dir: 'results'
+  scheduler:
+    type: 'ReduceLROnPlateau'
+    factor: 0.75
+    patience: 5
+    min_lr: 0.00001
+
+transforms:
+  train:
+    rotation_degrees: 10
+    translate: 0.2
+    scale: [0.8, 1.2]
+    random_erase_prob: 0.5
+  normalize:
+    mean: [0.5]
+    std: [0.5]

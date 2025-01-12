@@ -1,0 +1,6 @@
+Final Test Results:
+Loss: 0.9585
+Accuracy: 67.94%
+F1 Score: 0.6522
+Precision: 0.6779
+Recall: 0.6387
